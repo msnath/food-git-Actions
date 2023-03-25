@@ -1,5 +1,5 @@
-FROM nginx:latest
+FROM httpd:latest
 LABEL version="1.0"
 LABEL maintainer="srinath@gmail.com"
-WORKDIR /usr/share/nginx/html
+WORKDIR /var/www/html/
 COPY index.html index.html 
