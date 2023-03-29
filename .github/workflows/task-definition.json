@@ -1,13 +1,13 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-1:993067107780:task-definition/Sri-custom-TD-Ecs:1",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:993067107780:task-definition/my-td-222:1",
     "containerDefinitions": [
         {
-            "name": "sri-web-ecs",
-            "image": "993067107780.dkr.ecr.us-east-1.amazonaws.com/myhttpd:97efc307e729d63b652e18b2cfc6a493158a88a7",
+            "name": "mynginx",
+            "image": "993067107780.dkr.ecr.us-east-1.amazonaws.com/myrepo-nginx:latest",
             "cpu": 0,
             "portMappings": [
                 {
-                    "name": "sri-web-ecs-80-tcp",
+                    "name": "mynginx-80-tcp",
                     "containerPort": 80,
                     "hostPort": 0,
                     "protocol": "tcp",
@@ -21,7 +21,7 @@
             "volumesFrom": []
         }
     ],
-    "family": "Sri-custom-TD-Ecs",
+    "family": "my-td-222",
     "executionRoleArn": "arn:aws:iam::993067107780:role/ecsTaskExecutionRole",
     "networkMode": "bridge",
     "revision": 1,
@@ -48,7 +48,7 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2023-03-25T15:14:43.551Z",
+    "registeredAt": "2023-03-29T11:18:24.913Z",
     "registeredBy": "arn:aws:iam::993067107780:root",
     "tags": []
 }
