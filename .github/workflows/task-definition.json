@@ -1,13 +1,13 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-1:993067107780:task-definition/Sri-custom-TD-Ecs:9",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:993067107780:task-definition/my-td-practice:1",
     "containerDefinitions": [
         {
-            "name": "sri-web-ecs",
-            "image": "993067107780.dkr.ecr.us-east-1.amazonaws.com/myhttpd:b7f186d76a5f142274cb602dd60b5f109b9412d6",
+            "name": "mywebpractice",
+            "image": "993067107780.dkr.ecr.us-east-1.amazonaws.com/foodwebrepo:latest",
             "cpu": 0,
             "portMappings": [
                 {
-                    "name": "sri-web-ecs-80-tcp",
+                    "name": "mywebpractice-80-tcp",
                     "containerPort": 80,
                     "hostPort": 0,
                     "protocol": "tcp",
@@ -16,14 +16,14 @@
             ],
             "essential": true,
             "environment": [],
+            "environmentFiles": [],
             "mountPoints": [],
             "volumesFrom": []
         }
     ],
-    "family": "Sri-custom-TD-Ecs",
+    "family": "my-td-practice",
     "executionRoleArn": "arn:aws:iam::993067107780:role/ecsTaskExecutionRole",
-    "networkMode": "bridge",
-    "revision": 9,
+    "revision": 1,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -47,7 +47,7 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2023-03-29T12:13:35.492Z",
-    "registeredBy": "arn:aws:iam::993067107780:user/saikumar",
+    "registeredAt": "2023-03-31T12:58:32.201Z",
+    "registeredBy": "arn:aws:iam::993067107780:root",
     "tags": []
 }
